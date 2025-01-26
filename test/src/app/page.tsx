@@ -31,6 +31,7 @@ export default function Home() {
     
       <ThemeToggle/>
       <p>{data?.user.name}</p>
+      <p>{data?.user.email}</p>
       <Button variant={"destructive"} size={"icon"}>
         <Pen />
       </Button>
