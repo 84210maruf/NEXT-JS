@@ -9,35 +9,36 @@ import { toast } from "sonner";
 
 
 export default function Home() {
- const {data} = useSession()
- const logOut= async()=>{
-  await authClient.signOut(
-    {
-      fetchOptions:{
-        onSuccess: () => {
-          toast.success("Logout Sucessfully")
+  const { data } = useSession()
+  const logOut = async () => {
+    await authClient.signOut(
+      {
+        fetchOptions: {
+          onSuccess: () => {
+            toast.success("Logout Sucessfully")
 
-        },
+          },
+        }
       }
-    }
-  );
+    );
 
- } 
+  }
   return (
     <section>
-      <Navbar/>
+      <Navbar />
 
-    <div className="flex flex-col justify-center items-center space-y-3 mt-24">
-    
-      <ThemeToggle/>
-      <p>{data?.user.name}</p>
-      <p>{data?.user.email}</p>
-      <Button variant={"destructive"} size={"icon"}>
-        <Pen />
-      </Button>
-      <Button  onClick={()=>logOut()} >
-        Logout
-      </Button>
-    </div></section>
+      <div className="flex flex-col justify-center items-center space-y-3">
+
+        <ThemeToggle />
+        <p>{data?.user.name}</p>
+        <p>{data?.user.email}</p>
+        <Button variant={"destructive"} size={"icon"}>
+          <Pen />
+        </Button>
+        <Button onClick={() => logOut()} >
+          Logout
+        </Button>
+      </div>
+    </section>
   );
 }

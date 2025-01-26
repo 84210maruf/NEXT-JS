@@ -11,7 +11,7 @@ const Navbar = () => {
         { name: 'Profile', url: '/profile', icon: UserIcon }
       ]
     return (
-    <TubeLightNavBar items={navItems} />
+    <TubeLightNavBar className='flex flex-col items-center h-14' items={navItems} />
   )
 }
 
