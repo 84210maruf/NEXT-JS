@@ -34,3 +34,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+*** Installation and command List ***
+
+# bunx --bun create-next-app@14.2.15
+# bunx --bun shadcn@latest init 
+# pnpm dlx shadcn@latest init 
+# pnpm dlx shadcn@latest add button 
+# bun i
+#  bun add next-themes
+# bunx --bun shadcn@latest add "https://21st.dev/r/ayushmxxn/theme-toggle"  
+# pnpm dlx shadcn@latest add "https://21st.dev/r/ayushmxxn/theme-toggle" 
+
+# pnpm add better-auth     
+#  pnpm add prisma typescript tsx @types/node --save-dev 
+# pnpm run dev
+# pnpm dlx prisma init        
+# pnpm dlx prisma init --datasource-provider mongodb 
+# pnpm i mongodb 
+# pnpm add @prisma/client 
+# pnpm dlx @better-auth/cli generate 
+# npx @better-auth/cli generate  
+# npx prisma migrate 
+# npx prisma db push  
+# bun run dev

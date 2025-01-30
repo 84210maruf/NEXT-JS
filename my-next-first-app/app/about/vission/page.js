@@ -1,4 +1,4 @@
-import Button from '@/app/componants/Button'
+import Button from '@/componants/Button.js'
 import React from 'react'
 
 export default function vission() {
@@ -9,7 +9,6 @@ export default function vission() {
         sbhbsa jdnjidfn kjngjns kjsnjsn
       </div>
       <Button />
-
     </div>
   )
 }
