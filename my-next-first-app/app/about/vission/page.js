@@ -1,4 +1,4 @@
-import Button from '@/componants/Button.js'
+import Button from '../../../componants/Button.js'
 import React from 'react'
 
 export default function vission() {

@@ -1,7 +1,6 @@
 // app/posts/[id]/page.js
 'use client';
 
-import prisma from '@/prisma/prisma';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 

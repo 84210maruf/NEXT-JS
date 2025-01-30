@@ -1,4 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -18,22 +17,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 1. add prisma
 2. add batter-auth
@@ -41,18 +24,24 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ***Batter-auth and prisma***
 
-# pnpm add prisma typescript tsx @types/node --save-dev 
-# pnpm dlx prisma init --datasource-provider mongodb 
+# npm install prisma typescript tsx @types/node --save-dev 
+# npx prisma init --datasource-provider mongodb 
+
 * create model in [prisma.schema] and configure mongoDB connection string in [.env] run prisma generate
+  
 # npx prisma generate
 
-<!-- # pnpm add @prisma/client  -->
-* for use Database for CRUD add [prisma.js] and configure then use DB
+* client OR use Database for CRUD add [prisma.js] and configure then use DB
 
-[batter-auth]
-# pnpm add better-auth     
-# pnpm dlx @better-auth/cli generate 
+[better-auth]
+
+# npm install better-auth     
+
+* create model in [prisma.schema] and configure Better-auth connection string in [.env] run prisma generate and create and configure [lib/auth.ts]
+  
 # npx @better-auth/cli generate  
 # npx prisma migrate 
-<!-- # npx prisma db push   -->
-# bun run dev
+
+* create [auth-client.ts] for use it
+
+# npm run dev

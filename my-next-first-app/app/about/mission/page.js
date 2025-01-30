@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import nikolire from '@/public/images/nikolire.jpeg'
-import family from '@/public/images/family.jpeg'
+import nikolire from '../../../public/images/nikolire.jpeg'
+import family from '../../../public/images/family.jpeg'
 
 function mission() {
     return (

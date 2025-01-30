@@ -1,4 +1,4 @@
-import getAllPosts from '@/lib/getAllPosts'
+import getAllPosts from '../../lib/getAllPosts'
 import Link from 'next/link'
 import React from 'react'
 

@@ -1,4 +1,4 @@
-import prisma from '@/prisma/prisma';
+import prisma from '../../prisma/prisma';
 import Link from 'next/link'
 import React from 'react'
 
