@@ -38,7 +38,7 @@ function page() {
                         );
                     }}
                 >
-                    Create Post
+                    Signin
                 </button>
             </form>
         </div>

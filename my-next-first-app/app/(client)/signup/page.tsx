@@ -54,7 +54,7 @@ function page() {
             });
           }}
         >
-          Create Post
+          Signup
         </button>
       </form>
     </div>
