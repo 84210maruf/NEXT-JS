@@ -1,6 +1,7 @@
-import prisma from '../../prisma/prisma';
+import prisma from '../../lib/prisma';
 import Link from 'next/link'
 import React from 'react'
+import { getPostCached } from '../../lib/postCache';
 
 export const metadata = {
     title: "Bloks Layout",
@@ -8,7 +9,8 @@ export const metadata = {
   };
 
 async function Blogs() {
-    const blogs = await prisma.post.findMany(); 
+    const blogs = await getPostCached(); 
+    // const blogs = await prisma.post.findMany(); 
     // console.log(blog[0])
     // const blogs = [{
     //     id: 1,

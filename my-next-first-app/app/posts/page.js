@@ -1,9 +1,10 @@
 import getAllPosts from '../../lib/getAllPosts'
 import Link from 'next/link'
 import React from 'react'
+import { getCachedPostAPI } from '../../lib/getAllPosts'
 
 export default async function page() {
-    const deta = await getAllPosts()
+    const deta = await getCachedPostAPI()
   return (
     <div className='p-4'>
       All posts

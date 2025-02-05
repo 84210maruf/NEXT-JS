@@ -1,5 +1,5 @@
 import NotFound from '../../../app/not-found';
-import prisma from '../../../prisma/prisma';
+import prisma from '../../../lib/prisma';
 import Link from 'next/link';
 import React from 'react'
 

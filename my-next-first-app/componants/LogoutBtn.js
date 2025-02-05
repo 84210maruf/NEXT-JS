@@ -1,15 +1,16 @@
-
 "use client"
+
 import React from 'react'
-import { authClient,signOut } from '../lib/auth-client'
+import { useSession, signOut } from '../lib/auth-client'
 
 
 function LogoutBtn() {
-  const logOut = async () => {
-    await authClient.signOut()
-  }
+  const data = useSession() // Changed to avoid destructuring
   return (
-    <button onClick={() => logOut()}>useless Logout btn</button>
+    <div>
+      <p>User After login :{data?.user?.name}</p>
+      <button className='p-2 bg-orange-400 rounded-lg' onClick={() => signOut()}>Logout</button>
+    </div>
   )
 }
 

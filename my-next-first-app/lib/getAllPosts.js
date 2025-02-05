@@ -1,4 +1,5 @@
-export default async function getAllPosts(){
+import { unstable_cache } from "next/cache";
+async function getAllPosts(){
 
     const result = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
 
@@ -9,3 +10,5 @@ export default async function getAllPosts(){
     return result.json();
     
 }
+
+export const getCachedPostAPI = unstable_cache(getAllPosts)

@@ -1,27 +1,27 @@
-
-import prisma from "../prisma/prisma";
-import { authClient, signOut } from "../lib/auth-client";
+import prisma from "../lib/prisma";
 import LogoutBtn from '../componants/LogoutBtn'
+import { getUserCached } from "../lib/userCache";
+
 
 export default async function Home() {
 
   const [data] = await prisma.session.findMany()
-  const user = await prisma.user.findUnique({
-    where:{
-      id:data.userId
-    }
-  })
+  const [user] = await getUserCached()
 
-  const handleLogout = async () => {
-    await authClient.signOut()
-  };
+  // const user = await prisma.user.findUnique({
+  //   where:{
+  //     id:data.userId
+  //   }
+  // })
+  // console.log(data)
 
   return (
     <main className="pt-10">
       <div>Home page</div>
       <hr />
-      <p className="font-bold py-4">User Login INFO:</p>
-      <p>Name : {user?.name}</p>
+      <p className="font-bold py-4">User Login INFO from Direct PrismaDB:</p>
+      <p>Session Id : {data?.userId}</p>
+      <p>User Name :{user?.name}</p>
       <p>Email :{user?.email}</p>
       <LogoutBtn />
     </main>
