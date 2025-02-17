@@ -10,8 +10,8 @@ function page() {
   const [password, setPassword] = useState("");
   return (
     <div>
-      <form>
-        <div className='flex justify-between p-2 font-bold'>
+      <form className='flex flex-col items-center gap-y-4 pt-4'>
+        <div className='p-2 font-bold'>
           <label>name:</label>
           <input
             type="text"
@@ -19,9 +19,10 @@ function page() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            className='border'
           />
         </div>
-        <div className='flex justify-between p-2 font-bold'>
+        <div className='p-2 font-bold'>
           <label>email:</label>
           <input
             type="email"
@@ -29,9 +30,10 @@ function page() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            className='border'
           />
         </div>
-        <div className='flex justify-between p-2 font-bold' >
+        <div className=' p-2 font-bold' >
           <label>password:</label>
           <input
             type="password"
@@ -39,9 +41,10 @@ function page() {
             autoComplete="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className='border'
           />
         </div>
-        <button className='p-2 bg-slate-300 rounded-lg border-2 border-black'
+        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
           type="submit"
           disabled={false}
           onClick={async () => {

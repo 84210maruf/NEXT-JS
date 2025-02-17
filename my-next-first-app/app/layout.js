@@ -21,6 +21,8 @@ export default function RootLayout({ children }) {
             <li><Link href="/create-post">Create Post</Link></li>
             <li><Link href="/signin">SignIn</Link></li>
             <li><Link href="/signup">SignUp</Link></li>
+            <li><Link href="/test-data">TestData</Link></li>
+            <li><Link href="/search">searchParams</Link></li>
           </ul>
         </nav>
         <hr />

@@ -16,7 +16,7 @@ export default async function Home() {
   // console.log(data)
 
   return (
-    <main className="pt-10">
+    <main className="pt-10 flex flex-col items-center justify-center gap-y-2">
       <div>Home page</div>
       <hr />
       <p className="font-bold py-4">User Login INFO from Direct PrismaDB:</p>

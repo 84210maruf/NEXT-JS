@@ -62,7 +62,7 @@ export default function CreatePost() {
                         onChange={(e) => setPublished(e.target.checked)}
                     />
                 </div>
-                <button className='p-2 bg-slate-300 rounded-lg border-2 border-black' type="submit">Create Post</button>
+                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' type="submit">Create Post</button>
             </form>
         </div>
     );
