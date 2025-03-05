@@ -55,3 +55,5 @@ OR
 # pnpm dlx @better-auth/cli@latest secret 
 * add this secrete in .env file also add batter_auth_url 
 # pnpm dlx prisma db push
+# pnpm add @sendgrid/mail
+* http://localhost:3000/api/auth/reference [show all auth reference]

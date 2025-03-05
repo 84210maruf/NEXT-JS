@@ -1,8 +1,16 @@
-import { Button } from './ui/button'
-import React from 'react'
+import React from "react";
 
-export default function Loading() {
-  return (
-    <Button>Loading buttons</Button>
-  )
+interface LoadingButtonProps {
+  pending: boolean;
+  children: React.ReactNode;
 }
+
+const LoadingButton: React.FC<LoadingButtonProps> = ({ pending, children }) => {
+  return (
+    <button disabled={pending}>
+      {pending ? "Loading..." : children}
+    </button>
+  );
+};
+
+export default LoadingButton;
