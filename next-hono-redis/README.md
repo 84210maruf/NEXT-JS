@@ -45,4 +45,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 * yarn tsx src/lib/seed.ts 
 [its like migrate DB [https://console.upstash.com/redis]]
 
-* pnpm install tailwindcss-animate 
+* pnpm install tailwindcss-animate
+*  pnpm dlx shadcn@latest add command

@@ -1,4 +1,4 @@
-name = "next-hono-redisDB"
+name = "next-hono-redisdb"
 compatibility_date = "2024-04-02"
 
 [vars]

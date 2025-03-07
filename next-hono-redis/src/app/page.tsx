@@ -22,7 +22,8 @@ export default function Home() {
       if (!input) return setSearchResults(undefined)
       // once deployed, prefix this with your cloudflare worker url
       // i.e.: https://<name>.<account-name>.workers.dev/api/search?q=${input}
-
+      
+      // const res = await fetch(`https://next-hono-redis.next-hono-redisdb.workers.dev/api/search?q=${input}`)
       const res = await fetch(`/api/search?q=${input}`)
       const data = (await res.json()) as { results: string[]; duration: number }
       setSearchResults(data)
