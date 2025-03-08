@@ -49,9 +49,9 @@ function page() {
           disabled={false}
           onClick={async () => {
             await signUp.email({
+              name,
               email,
               password,
-              name,
               callbackURL: "/",
 
             });
