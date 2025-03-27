@@ -2,6 +2,7 @@ import prisma from '../../lib/prisma';
 import Link from 'next/link'
 import React from 'react'
 import { getPostCached } from '../../lib/postCache';
+import { z } from 'zod';
 
 export const metadata = {
     title: "Bloks Layout",
@@ -9,7 +10,20 @@ export const metadata = {
   };
 
 async function Blogs() {
-    const blogs = await getPostCached(); 
+    // const blogsScema = z.array(z.object({
+    //     id: z.number(),
+    //     title: z.string(),
+    //     content: z.string(),
+    //     addTime: z.date().nullable(),
+    //     createdAt: z.date(),
+    //     updatedAt: z.date(),
+    //     published: z.boolean(),
+    //     viewCount: z.number()
+    // }))
+    const blogs = await getPostCached();
+
+    // blogsScema.parse(blogs); 
+    
     // const blogs = await prisma.post.findMany(); 
     // console.log(blog[0])
     // const blogs = [{
@@ -32,7 +46,7 @@ async function Blogs() {
             <p className='text-lg font-bold p-2'>Posts From MongoDB</p>
             <ul>
                 {blogs.map((blog)=>(
-                    <li className='p-4 border my-2' key={blog.id} blog={blog}><Link href={`/blogs/${blog.id}`}>{blog.title}</Link></li>
+                    <li className='p-4 border my-2' key={blog.id} blog={blog}><Link href={`/blogs/${blog.id}`}>{blog.title} <br/>{blog.content}</Link></li>
                 ))}
             </ul>
         </main>
